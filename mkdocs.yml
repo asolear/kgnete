@@ -1,0 +1,80 @@
+site_name: Kgnete
+copyright: Copyright &copy; 2016 - 2024 KGnete
+dev_addr: 0.0.0.0:8000
+
+theme:
+  name: material
+  logo:  https://avatars.githubusercontent.com/u/6610060?v=4
+  favicon: https://avatars.githubusercontent.com/u/6610060?v=4
+
+  palette:
+    - scheme: slate
+      primary: blue grey
+      accent: orange
+  features:
+    - navigation.tabs
+  language: en
+
+plugins:
+  - blog
+  - privacy
+  - search
+
+extra:
+  generator: false
+  analytics:
+    provider: google
+    property: G-XXXXXXXXX
+  consent:
+    title:  Consentimiento de Cookies
+    description: >- 
+      Utilizo cookies para reconocer sus visitas y para medir la eficacia de mi documentación.
+    cookies:
+      analytics:
+        name: Google Analytics
+        checked: true
+    actions:
+      - accept
+      - reject  
+  alternate:
+    - name: English 
+      link: /
+      lang: en
+    - name: Español
+      link: /
+      lang: es
+    - name: Italiano
+      link: /
+      lang: it
+
+
+
+  social:
+    - icon: fontawesome/brands/whatsapp 
+      link: https://api.whatsapp.com/send?phone=34600366211
+    - icon: fontawesome/solid/phone
+      link: tel:+34 600366211
+    - icon: material/email
+      link: mailto:kgnete@gmail.com
+    - icon: fontawesome/brands/github
+      link: https://github.com/kgnete
+    - icon: fontawesome/brands/stack-overflow
+      link: https://stackoverflow.com/users/3788513/kgnete
+    - icon: fontawesome/brands/kaggle
+      link: https://www.kaggle.com/kgnete
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/kgnete
+    - icon: fontawesome/brands/x-twitter 
+      link: https://twitter.com/kgnete
+    - icon: fontawesome/brands/facebook 
+      link: https://www.facebook.com/kgnete
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/in/k-gnete-590154165/
+    - icon: fontawesome/brands/instagram 
+      link: https://www.instagram.com/kgnete/
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
