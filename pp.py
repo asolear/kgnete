@@ -86,10 +86,12 @@ def cname():
 if __name__ == "__main__":
     o = SimpleNamespace()
     cname()
+    carpeta_destino="/home/pk/Desktop/mkdocs/docs/blog/posts"
     # Directorio que quieres explorar de manera recursiva
     directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Tramites y Permisos"
     directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Proyectos/Fotovoltaica/08_ANEJOS/INCENTIVOS_NEXT_GENERATION"
     directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Proyectos/Fotovoltaica"
+    directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/assets/fichatecnica"
 
 
     # Obtener la lista de archivos con rutas
