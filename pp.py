@@ -7,10 +7,12 @@ import datetime
 from types import SimpleNamespace
 
 
-def imagenes(pdf_path, carpeta_destino, resolucion_dpi=300):
+def imagenes(file, carpeta_destino, resolucion_dpi=300):
+    o.pngs=[]
+    pdf_path, o.archivo = os.path.split(file)
     # Convierte el PDF a una lista de imágenes
-    imagenes = convert_from_path(pdf_path, dpi=resolucion_dpi)
-    ruta_carpeta = f"{carpeta_destino}/{pdf_path[:-4]}"
+    imagenes = convert_from_path(file, dpi=resolucion_dpi)
+    ruta_carpeta = f"{carpeta_destino}/{o.archivo[:-4]}"
     if os.path.exists(ruta_carpeta):
         # Si existe, la borra con todo su contenido
         shutil.rmtree(ruta_carpeta)
@@ -18,9 +20,9 @@ def imagenes(pdf_path, carpeta_destino, resolucion_dpi=300):
     # Recorre todas las imágenes generadas
     for num_pagina, imagen in enumerate(imagenes):
         # Guarda la imagen en la carpeta de destino
-        imagen_path = f"{carpeta_destino}/{pdf_path[:-4]}/pagina_{num_pagina + 1}.png"
+        imagen_path = f"{ruta_carpeta}/pagina_{num_pagina + 1}.png"
         imagen.save(imagen_path, "PNG")
-        pngs.append(f"![]({pdf_path[:-4]}/pagina_{num_pagina + 1}.png)\n")
+        o.pngs.append(f"![]({o.archivo[:-4]}/pagina_{num_pagina + 1}.png)\n")
 
 
 def obtener_archivos_con_rutas(directorio):
@@ -48,26 +50,27 @@ def obtener_archivos_con_rutas(directorio):
         datetime.datetime.fromtimestamp(date).strftime("%Y-%m-%d") for date in dates
     ]
 
-    return nombres, categoriass, fechas
+    return files, nombres, categoriass, fechas
 
 
-def md(carpeta_destino):
+def md(date,cats):
+    carpeta_destino = "docs/blog/posts"
     #
-    cats = ["FV", "Aisalada", "Conectadas"]
+    
     lineascats = []
     lineascats.append(f"categories:\n")
     for cat in cats:
         lineascats.append(f"  - {cat}\n")
-    f = open(f"{carpeta_destino}/pp.md", "w")
+    f = open(f"{carpeta_destino}/{o.archivo[:-4]}.md", "w")
     lineas = [
         "---",
-        "date: 2023-01-31 ",
+        f"date: {date}",
         "authors:",
         "  - kgnete",
         f"{''.join(lineascats)}",
         "---",
         "#",
-        f"{''.join(pngs)}",
+        f"{''.join(o.pngs)}",
     ]
     for linea in lineas:
         f.write(linea + "\n")
@@ -85,13 +88,16 @@ if __name__ == "__main__":
     cname()
     # Directorio que quieres explorar de manera recursiva
     directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Tramites y Permisos"
+    directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Proyectos/Fotovoltaica/08_ANEJOS/INCENTIVOS_NEXT_GENERATION"
+    directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Proyectos/Fotovoltaica"
+
 
     # Obtener la lista de archivos con rutas
-    nombres, categoriass, fechas = obtener_archivos_con_rutas(directorio_raiz)
+    files, nombres, categoriass, fechas = obtener_archivos_con_rutas(directorio_raiz)
 
-    pdfs = ["pp"]
-    for pdf in pdfs:
-        carpeta_destino = "docs/blog/posts"
+
+    for ii, file in enumerate(files):
+
         pngs = []
-        imagenes(f"{pdf}.pdf", carpeta_destino, resolucion_dpi=100)
-        md(carpeta_destino)
+        imagenes(file, carpeta_destino, resolucion_dpi=100)
+        md(fechas[ii],categoriass[ii])
