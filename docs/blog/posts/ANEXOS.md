@@ -5,13 +5,9 @@ authors:
 categories:
   - Fotovoltaica
   - 03_ANEXOS
-excerpts: ---
+
 ---
-
-
-# 
-
-
+#
 ![](ANEXOS/pagina_1.png)
 ![](ANEXOS/pagina_2.png)
 ![](ANEXOS/pagina_3.png)
