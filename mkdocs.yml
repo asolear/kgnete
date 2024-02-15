@@ -7,6 +7,8 @@ theme:
   logo:  https://avatars.githubusercontent.com/u/6610060?v=4
   favicon: https://avatars.githubusercontent.com/u/6610060?v=4
 
+  palette:
+    primary: white
   # palette:
   #   - scheme: slate
   #     primary: blue grey
