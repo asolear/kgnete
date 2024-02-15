@@ -19,7 +19,6 @@ theme:
 
 plugins:
   - blog:
-      blog_toc: true
       post_excerpt_separator: pagina_2.png
 
   - privacy
