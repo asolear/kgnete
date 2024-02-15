@@ -7,10 +7,11 @@ theme:
   logo:  https://avatars.githubusercontent.com/u/6610060?v=4
   favicon: https://avatars.githubusercontent.com/u/6610060?v=4
 
-  palette:
-    - scheme: slate
-      primary: blue grey
-      accent: orange
+  # palette:
+  #   - scheme: slate
+  #     primary: blue grey
+  #     accent: orange
+
   features:
     - navigation.tabs
     - toc.integrate 
