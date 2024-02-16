@@ -43,7 +43,7 @@ def obtener_archivos_con_rutas(directorio):
     #
     files = [tupla[0] for tupla in tuplas]
     nombres = [tit.split("/")[-1:][0][:-4] for tit in files]
-    categoriass = [cat.split("/")[7:-1] for cat in files]
+    categoriass = [cat.split("/")[7:-2] for cat in files]
     #
     dates = [tupla[1] for tupla in tuplas]
     fechas = [
@@ -90,8 +90,8 @@ if __name__ == "__main__":
     # Directorio que quieres explorar de manera recursiva
     directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Tramites y Permisos"
     directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Proyectos/Fotovoltaica/08_ANEJOS/INCENTIVOS_NEXT_GENERATION"
-    directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Proyectos/Fotovoltaica"
-    directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/assets/fichatecnica"
+    directorio_raiz = "/home/pk/Desktop/pdfs/docs/Proyectos/Fotovoltaica"
+    # directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/assets/fichatecnica"
 
 
     # Obtener la lista de archivos con rutas

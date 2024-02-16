@@ -22,6 +22,7 @@ theme:
 plugins:
   - blog:
       post_excerpt_separator: pagina_2.png
+      categories_toc: true
 
   - privacy
   - search

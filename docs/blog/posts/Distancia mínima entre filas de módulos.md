@@ -1,11 +1,10 @@
 ---
-date: 2023-12-09
+date: 2024-02-14
 authors:
   - kgnete
 categories:
   - Fotovoltaica
   - 03_ANEXOS
-  - CALCULOS
 
 ---
 #
