@@ -10,10 +10,10 @@ Here you will find articles, projects, and reflections on topics such as:
 
 - :fontawesome-solid-solar-panel: Energy conversion.
 - :material-battery: Energy storage.
-- :simple-arduino: Control systems.
+<!-- - :simple-arduino: Control systems. -->
 - :simple-victronenergy:  Power electronics.
-- :material-car-arrow-right: Electric vehicles.
-- ⚡️ and more.
+<!-- - :material-car-arrow-right: Electric vehicles. -->
+<!-- - ⚡️ and more. -->
 
 From theory to practical applications, my goal is to provide content that is informative and relevant to your interest in this specialized area.
 
