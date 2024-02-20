@@ -4,8 +4,8 @@ dev_addr: 0.0.0.0:8000
 
 theme:
   name: material
-  logo:  https://avatars.githubusercontent.com/u/6610060?v=4
-  favicon: https://avatars.githubusercontent.com/u/6610060?v=4
+  logo:  /img/sol.png
+  favicon: /img/sol.png
 
   palette:
     primary: white
