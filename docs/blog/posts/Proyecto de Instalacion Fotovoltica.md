@@ -1,7 +1,7 @@
 ---
 date: 2024-02-16
 authors:
-  - kgnete
+  - Fotovoltaica
 categories:
   - Fotovoltaica
 

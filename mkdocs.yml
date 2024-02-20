@@ -23,6 +23,7 @@ plugins:
   - blog:
       post_excerpt_separator: pagina_2.png
       categories_toc: true
+      blog_toc: true
 
   - privacy
   - search
