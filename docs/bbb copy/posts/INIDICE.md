@@ -1,7 +1,7 @@
 ---
 date: 2024-02-14
 authors:
-  - kgnete
+  - Aislada
 categories:
   - Fotovoltaica
 
