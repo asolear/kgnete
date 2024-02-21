@@ -12,7 +12,7 @@ def imagenes(file, carpeta_destino, resolucion_dpi=300):
     pdf_path, o.archivo = os.path.split(file)
     # Convierte el PDF a una lista de imágenes
     imagenes = convert_from_path(file, dpi=resolucion_dpi)
-    ruta_carpeta = f"{carpeta_destino}/{o.archivo[:-4]}"
+    ruta_carpeta = f"{carpeta_destino}"
     if os.path.exists(ruta_carpeta):
         # Si existe, la borra con todo su contenido
         shutil.rmtree(ruta_carpeta)
@@ -53,7 +53,7 @@ def obtener_archivos_con_rutas(directorio):
     return o.files, o.nombres, o.listaCategorias, o.fechas
 
 
-def md(date,cats):
+def md(file,date,cats):
     carpeta_destino = "docs/blog/posts"
     #
     
@@ -61,7 +61,7 @@ def md(date,cats):
     lineascats.append(f"categories:\n")
     for cat in cats:
         lineascats.append(f"  - {cat}\n")
-    f = open(f"{carpeta_destino}/{o.archivo[:-4]}.md", "w")
+    f = open(f"{carpeta_destino}/{file}.md", "w")
     lineas = [
         "---",
         f"date: {date}",
@@ -99,5 +99,5 @@ if __name__ == "__main__":
         for ii, file in enumerate(o.files):
 
             pngs = []
-            imagenes(file, carpeta_destino, resolucion_dpi=100)
-            md(o.fechas[ii],o.listaCategorias[ii])
+            imagenes(file, f"{carpeta_destino}/{o.nombres[ii]}", resolucion_dpi=100)
+            md(o.nombres[ii],o.fechas[ii],o.listaCategorias[ii])
