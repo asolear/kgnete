@@ -42,15 +42,15 @@ def obtener_archivos_con_rutas(directorio):
     tuplas = archivos_con_rutas
     #
     o.files = [tupla[0] for tupla in tuplas]
-    o.nombres = [tit.split("/")[-1:][0][:-4] for tit in o.files]
-    o.categoriass = [cat.split("/")[7:-2] for cat in o.files]
-    #
+    o.nombres = [os.path.basename(os.path.dirname(tit)).split('_')[1] for tit in o.files]
+    # o.listaCategorias = [cat.split("/")[7:-2] for cat in o.files]
+    o.listaCategorias = [directorio_origen.split("/")[-1:] for cat in o.files]
     dates = [tupla[1] for tupla in tuplas]
     o.fechas = [
         datetime.datetime.fromtimestamp(date).strftime("%Y-%m-%d") for date in dates
     ]
 
-    return o.files, o.nombres, o.categoriass, o.fechas
+    return o.files, o.nombres, o.listaCategorias, o.fechas
 
 
 def md(date,cats):
@@ -84,22 +84,20 @@ def cname():
 
 
 if __name__ == "__main__":
-    o = SimpleNamespace()
     cname()
-    carpeta_destino="/home/pk/Desktop/mkdocs/docs/blog/posts"
-    # Directorio que quieres explorar de manera recursiva
-    directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Tramites y Permisos"
-    directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/docs/Proyectos/Fotovoltaica/08_ANEJOS/INCENTIVOS_NEXT_GENERATION"
-    directorio_raiz = "/home/pk/Desktop/pdfs/docs/aa"
-    # directorio_raiz = "/home/pk/Desktop/web_pdfs_qroman17/assets/fichatecnica"
+    if 1:
+        # exec(open("aa.py").read())
+
+        o = SimpleNamespace()
+        carpeta_destino="/home/pk/Desktop/mkdocs/docs/blog/posts"
+        directorio_origen = "/home/pk/Desktop/pdfs/docs/aa"
+
+        # Obtener la lista de archivos con rutas
+        o.files, o.nombres, o.listaCategorias, o.fechas = obtener_archivos_con_rutas(directorio_origen)
 
 
-    # Obtener la lista de archivos con rutas
-    o.files, o.nombres, o.categoriass, o.fechas = obtener_archivos_con_rutas(directorio_raiz)
+        for ii, file in enumerate(o.files):
 
-
-    for ii, file in enumerate(o.files):
-
-        pngs = []
-        imagenes(file, carpeta_destino, resolucion_dpi=100)
-        md(o.fechas[ii],o.categoriass[ii])
+            pngs = []
+            imagenes(file, carpeta_destino, resolucion_dpi=100)
+            md(o.fechas[ii],o.listaCategorias[ii])

@@ -3,6 +3,7 @@ date: 2024-02-21
 authors:
   - Fotovoltaica
 categories:
+  - aa
 
 ---
 #
