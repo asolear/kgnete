@@ -116,13 +116,20 @@ if __name__ == "__main__":
         o = SimpleNamespace()
         carpeta_destino="/home/pk/Desktop/mkdocs/docs/blog/posts"
         
-        directorios= ["/home/pk/Desktop/pdfs/md2pdf/Proyectos/Fotovoltaica"]
+        if 1:
+            try:
+                shutil.rmtree(carpeta_destino)
+            except:
+                ''''''
+            os.mkdir(carpeta_destino)
+                    
+        if 1:
+            directorios= ["/home/pk/Desktop/pdfs/md2pdf/Proyectos/Fotovoltaica"]
 
-        for directorio in directorios:
-            print(directorio)
-            o.files, o.nombres, o.listaCategorias, o.fechas = obtener_archivos_con_rutas(directorio)
-            print(o.files, o.nombres, o.listaCategorias, o.fechas)
-            for ii, file in enumerate(o.files):
-                
-                imagenes(o.files[ii],o.nombres[ii], f"{carpeta_destino}/{o.nombres[ii]}", resolucion_dpi=100)
-                md(o.nombres[ii],o.fechas[ii],o.listaCategorias[ii])
+            for directorio in directorios:
+                o.files, o.nombres, o.listaCategorias, o.fechas = obtener_archivos_con_rutas(directorio)
+                print(o.files, o.nombres, o.listaCategorias, o.fechas)
+                for ii, file in enumerate(o.files):
+                    
+                    imagenes(o.files[ii],o.nombres[ii], f"{carpeta_destino}/{o.nombres[ii]}", resolucion_dpi=100)
+                    md(o.nombres[ii],o.fechas[ii],o.listaCategorias[ii])
