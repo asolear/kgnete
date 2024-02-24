@@ -29,9 +29,15 @@ def imagenes(file,nombre, carpeta_destino, resolucion_dpi=300):
 def obtener_archivos_con_rutas(directorio):
     
     archivos_con_rutas = []
-    # Utilizar glob para obtener la lista de archivos de manera recursiva
-    archivos = glob.glob(os.path.join(directorio, "**", "*"), recursive=True)
-    archivos = glob.glob(os.path.join(directorio, "**", "*zRES*"), recursive=True)
+
+    carpetas = [nombre for nombre in os.listdir(directorio) if os.path.isdir(os.path.join(directorio, nombre))]
+    archivos=[]
+    for carpeta in carpetas:
+        archivos.append(glob.glob(os.path.join(directorio, carpeta, "*zRES*")))
+    archivos = [elemento for sublista in archivos for elemento in sublista if elemento]
+
+
+
     o.archivos=archivos
     
     for archivo in archivos:
