@@ -33,7 +33,7 @@ def obtener_archivos_con_rutas(directorio):
     carpetas = [nombre for nombre in os.listdir(directorio) if os.path.isdir(os.path.join(directorio, nombre))]
     archivos=[]
     for carpeta in carpetas:
-        archivos.append(glob.glob(os.path.join(directorio, carpeta, "*zRES*")))
+        archivos.append(glob.glob(os.path.join(directorio, carpeta, "*pdf*")))
     archivos = [elemento for sublista in archivos for elemento in sublista if elemento]
 
 
@@ -130,7 +130,9 @@ if __name__ == "__main__":
             os.mkdir(carpeta_destino)
                     
         if 1:
-            directorios= ["/home/pk/Desktop/pdfs/md2pdf/Proyectos/Fotovoltaica"]
+            directorios= [
+                "/home/pk/Desktop/pdfs/md2pdf/Proyectos/INSTALACION FOTOVOLTAICA/01.PROYECTO",
+                "/home/pk/Desktop/pdfs/md2pdf/Proyectos/INSTALACION FOTOVOLTAICA/02.ANEXOS",]
 
             for directorio in directorios:
                 o.files, o.nombres, o.listaCategorias, o.fechas = obtener_archivos_con_rutas(directorio)
