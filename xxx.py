@@ -132,7 +132,8 @@ if __name__ == "__main__":
         if 1:
             directorios= [
                 "/home/pk/Desktop/pdfs/md2pdf/Proyectos/INSTALACION FOTOVOLTAICA/01.PROYECTO",
-                "/home/pk/Desktop/pdfs/md2pdf/Proyectos/INSTALACION FOTOVOLTAICA/02.ANEXOS",]
+                "/home/pk/Desktop/pdfs/md2pdf/Proyectos/INSTALACION FOTOVOLTAICA/02.ANEXOS",
+                "/home/pk/Desktop/pdfs/md2pdf/Proyectos/INSTALACION FOTOVOLTAICA"]
 
             for directorio in directorios:
                 o.files, o.nombres, o.listaCategorias, o.fechas = obtener_archivos_con_rutas(directorio)
