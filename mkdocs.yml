@@ -26,7 +26,7 @@ plugins:
       # blog_toc: true
       # blog_dir: bbb
 
-  - privacy
+  # - privacy
   - search
   
 
