@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+
+\begin{document}
+\begin{tikzpicture}
+    % Dibujar la letra k grande en negrita e itálica
+    \node[scale=7, font=\bfseries, color=black] at (0,0) {K};
+    \node[scale=7, font=\bfseries, color=orange] at (0.55,0) {I};
+    % Componentes de circuitikz como adornos dentro del círculo
+    % \begin{scope}[shift={(-1.0,-1.2)}, scale=1.2]
+    %     % electrical equivalent circuit
+    %     \draw (0,2) to[V, v_=$U_A$] (0,0);
+    %     \draw (0,2) to[resistor, i>^=$I_A$, l=$R_A$] (2,2);
+    %     \draw (2,2) to[inductor, l=$L_A$] (2,0);
+    %     \draw (2,0) to[C, l=$C_A$] (0,0);
+    % \end{scope}
+\end{tikzpicture}
+
+\end{document}
