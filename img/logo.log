@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.4)  25 JUN 2024 00:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.4)  9 JUN 2024 18:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/pk/Desktop/kgnete/site/img/logo
-(/home/pk/Desktop/kgnete/site/img/logo.tex
+**/home/pk/Desktop/kgnete/docs/img/logo
+(/home/pk/Desktop/kgnete/docs/img/logo.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.cls
 Document Class: standalone 2018/03/26 v1.3a Class to compile TeX sub-files standalone
@@ -346,7 +346,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Here is how much of TeX's memory you used:
  26609 strings out of 480185
  691889 string characters out of 5894214
- 1185594 words of memory out of 5000000
+ 1185596 words of memory out of 5000000
  44298 multiletter control sequences out of 15000+600000
  469259 words of font info for 28 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
