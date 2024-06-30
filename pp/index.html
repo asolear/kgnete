@@ -20,7 +20,7 @@
     
     
       
-        <title>Pp - KG.NEwTechEnergy</title>
+        <title>Mi Documento - KG.NEwTechEnergy</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#mi-documento" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pp
+              Mi Documento
             
           </span>
         </div>
@@ -289,7 +289,7 @@
   
     
   
-  Pp
+  Mi Documento
 
       </a>
     </li>
@@ -475,7 +475,7 @@
         
   
   <span class="md-ellipsis">
-    Pp
+    Mi Documento
   </span>
   
 
@@ -1109,7 +1109,8 @@
                   
 
 
-<h1 id="_1"></h1>
+<h1 id="mi-documento">Mi Documento</h1>
+<p>Aquí se renderizará un PDF utilizando PDF.js.</p>
 <div id="pdf-render" style="border: 1px solid #ccc; width: 100%; height: auto; overflow: auto;"></div>
 
 <script type="module">
@@ -1122,11 +1123,14 @@
         // Asignar el trabajador PDF.js
         pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdfjs/pdf.worker.mjs';
 
+        // Contenedor donde se renderizarán las páginas
+        const container = document.getElementById('pdf-render');
+
         // Función para renderizar una página
         function renderPage(pdf, pageNumber) {
             return pdf.getPage(pageNumber).then(page => {
                 const viewport = page.getViewport({ scale: 1 });
-                const containerWidth = document.getElementById('pdf-render').clientWidth;
+                const containerWidth = container.clientWidth;
                 const scale = containerWidth / viewport.width;
                 const scaledViewport = page.getViewport({ scale });
 
@@ -1138,7 +1142,7 @@
                 canvas.width = scaledViewport.width;
 
                 // Agregar el canvas al DOM
-                document.getElementById('pdf-render').appendChild(canvas);
+                container.appendChild(canvas);
 
                 // Renderizar la página PDF en el canvas
                 const renderContext = {
