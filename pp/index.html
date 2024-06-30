@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -462,6 +467,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -1102,19 +1109,18 @@
                   
 
 
-  <h1>Pp</h1>
-
+<h1 id="_1"></h1>
 <div id="pdf-render" style="border: 1px solid #ccc; width: 100%; height: auto; overflow: auto;"></div>
 
-<script src="https://unpkg.com/pdfjs-dist@3.6.172/build/pdf.min.js"></script>
-<script>
+<script type="module">
+    import * as pdfjsLib from '/js/pdfjs/pdf.mjs';
+
     document.addEventListener('DOMContentLoaded', function () {
         // URL del PDF que se quiere renderizar
         const url = 'BOE-A-2023-16940.pdf';
 
         // Asignar el trabajador PDF.js
-        const pdfjsLib = window['pdfjs-dist/build/pdf'];
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@3.6.172/build/pdf.worker.min.js';
+        pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdfjs/pdf.worker.mjs';
 
         // Función para renderizar una página
         function renderPage(pdf, pageNumber) {
@@ -1301,6 +1307,8 @@
     
     
       <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../js/pdfjs/pdf.mjs" type="module"></script>
       
     
   </body>
