@@ -1104,7 +1104,8 @@
 
   <h1>Pp</h1>
 
-<div id="pdf-render" style="border: 1px solid #ccc; width: 100%; height: 100vh; overflow: auto;"></div>
+<p>Aquí se renderizará un PDF utilizando PDF.js.</p>
+<div id="pdf-render" style="border: 1px solid #ccc; width: 100%; height: auto; overflow: auto;"></div>
 
 <script src="https://unpkg.com/pdfjs-dist@3.6.172/build/pdf.min.js"></script>
 <script>
@@ -1119,15 +1120,16 @@
         // Función para renderizar una página
         function renderPage(pdf, pageNumber) {
             return pdf.getPage(pageNumber).then(page => {
-                const scale = 1.5;
-                const viewport = page.getViewport({ scale });
+                const viewport = page.getViewport({ scale: 1 });
+                const scale = document.getElementById('pdf-render').clientWidth / viewport.width;
+                const scaledViewport = page.getViewport({ scale });
 
                 // Preparar el canvas usando las dimensiones de la página
                 const canvas = document.createElement('canvas');
                 canvas.className = 'pdf-page';
                 const context = canvas.getContext('2d');
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
+                canvas.height = scaledViewport.height;
+                canvas.width = scaledViewport.width;
 
                 // Agregar el canvas al DOM
                 document.getElementById('pdf-render').appendChild(canvas);
@@ -1135,7 +1137,7 @@
                 // Renderizar la página PDF en el canvas
                 const renderContext = {
                     canvasContext: context,
-                    viewport: viewport
+                    viewport: scaledViewport
                 };
                 return page.render(renderContext).promise;
             });
