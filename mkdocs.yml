@@ -22,8 +22,10 @@ theme:
   language: es
 
 plugins:
-  - blog:
-      post_excerpt_separator: pagina_1.png
+  # - blog:
+  #     post_excerpt_separator: pagina_1.png
+  #     authors: false
+
       # # categories_toc: true
       # blog_toc: true
       # # blog_dir: bbb
