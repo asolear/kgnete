@@ -1,5 +1,4 @@
-# RES070 Renovación o sustitución de ventanas en edificios de Viviendas
-
+# 
 <button class="md-button md-button--primary" id="download-btn">:fontawesome-solid-file-arrow-down: Descargar PDF</button>
 <div id="pdf-render" style="border: 1px solid #ccc; width: 100%; height: auto; overflow: auto;"></div>
 <script type="module">
@@ -17,12 +16,15 @@
                 const canvas = document.createElement('canvas');
                 canvas.className = 'pdf-page';
                 const context = canvas.getContext('2d');
-                canvas.height = scaledViewport.height;
-                canvas.width = scaledViewport.width;
+                canvas.style.width = `${scaledViewport.width}px`;;
+                canvas.style.height = `${scaledViewport.height}px`;
+                const resolutionScale = 2;
+                canvas.height = scaledViewport.height * resolutionScale;
+                canvas.width = scaledViewport.width * resolutionScale;
                 container.appendChild(canvas);
                 const renderContext = {
                     canvasContext: context,
-                    viewport: scaledViewport
+                    viewport: page.getViewport({ scale: scale * resolutionScale })
                 };
                 return page.render(renderContext).promise;
             });
