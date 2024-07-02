@@ -20,15 +20,15 @@ hide:
 
 <div class="grid cards" markdown>
 
--   ## Certificación de Eficiencia Energético (CEEs)
+<!-- -   ## Certificación de Eficiencia Energético (CEEs)
     ---
     <img src="img/eficiencia energetica.png" alt="Alt text" width="350">
    
     MONETIZAMOS TUS PROYECTOS DE EFICIENCIA ENERGÉTICA DE MANERA RÁPIDA, SENCILLA Y EFICAZ
 
-    [Solicitar ](blog/category/eficiencia-energetica/){ .md-button }
+    [Solicitar ](blog/category/eficiencia-energetica/){ .md-button } -->
 
--   ## Certificación de Ahorro Energético (CAEs)
+-   ## Certificados de Ahorro Energético (CAE)
 
     ---
   
