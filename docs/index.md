@@ -37,7 +37,7 @@ hide:
 
     MONETIZAMOS TUS PROYECTOS DE EFICIENCIA ENERGÉTICA DE MANERA RÁPIDA, SENCILLA Y EFICAZ
 
-    [Solicitar ](blog/category/eficiencia-energetica/){ .md-button }
+    [Solicitar ](Certificados de Ahorro Energético (CAE)/EL SISTEMA CAE/CAEs/){ .md-button }
 
 -   ## Energías renovables
 
