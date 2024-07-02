@@ -4,7 +4,7 @@
 <script type="module">
     import * as pdfjsLib from '/js/pdfjs/pdf.mjs';
     document.addEventListener('DOMContentLoaded', function () {
-        const url = 'Rentabilidad de una bateria.pdf';
+        const url = 'FV350 Análisis de seguridad estructural de las cubiertas.pdf';
         pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdfjs/pdf.worker.mjs';
         const container = document.getElementById('pdf-render');
         function renderPage(pdf, pageNumber) {

@@ -4,7 +4,7 @@
 <script type="module">
     import * as pdfjsLib from '/js/pdfjs/pdf.mjs';
     document.addEventListener('DOMContentLoaded', function () {
-        const url = 'Perdidas por orientacion e inclinacion.pdf';
+        const url = 'FV100 Resultados Instalacion FV.pdf';
         pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdfjs/pdf.worker.mjs';
         const container = document.getElementById('pdf-render');
         function renderPage(pdf, pageNumber) {

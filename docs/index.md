@@ -35,26 +35,27 @@ hide:
     <img src="img/cae.jpg" alt="Alt text" width="350">
 
 
-    MONETIZAMOS TUS PROYECTOS DE EFICIENCIA ENERGÉTICA DE MANERA RÁPIDA, SENCILLA Y EFICAZ
+    TE AYUDAMOS A AHORRAR ENERGIA Y A QUE TE PAGEN POR AHORRAR.
 
-    [Solicitar ](Certificados de Ahorro Energético (CAE)/EL SISTEMA CAE/CAEs/){ .md-button }
+    <!-- [Solicitar ](Certificados de Ahorro Energético (CAE)/EL SISTEMA CAE/CAEs/){ .md-button } -->
 
--   ## Energías renovables
+-   ## Renovables
 
     ---
 
-    Change the colors, fonts, language, icons, logo and more with a few lines
-
     <img src="img/fv.jpg" alt="Alt text" width="350">
+    Te valoramos, dimensiomanos y proyectamos una instalación que te haga ahorrar.
 
-    [Solicitar ](blog/category/eficiencia-energetica/){ .md-button }
+
+    <!-- [Solicitar ](blog/category/eficiencia-energetica/){ .md-button } -->
 
 -   ## Recarga de VE
     
     ---
-
-
     [![Image title](img/ev.jpg)](blog/category/recarga-vehiculo-electrico/)
+
+    Te proyectamos y ejecutamos tu enchufe para el coche.
+
 </div>
 
 </center>

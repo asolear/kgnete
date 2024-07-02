@@ -4,7 +4,7 @@
 <script type="module">
     import * as pdfjsLib from '/js/pdfjs/pdf.mjs';
     document.addEventListener('DOMContentLoaded', function () {
-        const url = 'Distancia minima entre filas de modulos.pdf';
+        const url = 'FV020 Disposicion de los paneles.pdf';
         pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdfjs/pdf.worker.mjs';
         const container = document.getElementById('pdf-render');
         function renderPage(pdf, pageNumber) {
