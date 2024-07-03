@@ -35,7 +35,7 @@ hide:
     <img src="img/cae.jpg" alt="Alt text" width="350">
 
 
-    TE AYUDAMOS A AHORRAR ENERGIA Y A QUE TE PAGEN POR AHORRAR.
+    TE AYUDAMOS A AHORRAR ENERGIA Y A QUE LAS ENERGETICAS TE PAGEN AL MEJOR PRECIO POR HACERLO.
 
     <!-- [Solicitar ](Certificados de Ahorro Energético (CAE)/EL SISTEMA CAE/CAEs/){ .md-button } -->
 
@@ -52,7 +52,7 @@ hide:
 -   ## Recarga de VE
     
     ---
-    [![Image title](img/ev.jpg)](blog/category/recarga-vehiculo-electrico/)
+    [![Image title](img/ev.jpg)]()
 
     Te proyectamos y ejecutamos tu enchufe para el coche.
 
